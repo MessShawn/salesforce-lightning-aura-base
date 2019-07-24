@@ -1,0 +1,18 @@
+<aura:component >
+
+    <aura:method name="call"
+        description="Call an @AuraEnabled method on an Apex class, pass parameters and return a promise">
+        
+        <aura:attribute name="action"
+            type="Object"
+            required="true"
+            description="The @AuraEnabled method the consuming component's Apex controller." />
+        
+        <aura:attribute name="isResolveSerializedData"
+            type="Boolean"
+            default="false"
+            description="if true, the resolved data will be serialized to avoid lightning create proxy for it the return value." />
+            
+    </aura:method>
+
+</aura:component>
